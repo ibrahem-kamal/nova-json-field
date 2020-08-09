@@ -1,0 +1,22 @@
+.jsoneditor-poweredBy {
+  display: none;
+}
+div.jsoneditor-menu {
+  background-color: var(--primary);
+  border-bottom: var(--primary);
+}
+div.jsoneditor {
+  border: solid 1px var(--20);
+  /* max-height: 600px; */
+}
+.jsoneditor-vue {
+  height: 100%;
+}
+div.jsoneditor-contextmenu ul li button.jsoneditor-selected,
+div.jsoneditor-contextmenu ul li button.jsoneditor-selected:hover,
+div.jsoneditor-contextmenu ul li button.jsoneditor-selected:focus {
+  background-color: var(--primary);
+}
+.jsoneditor-outer {
+  height: calc(90vh - 150px) !important;
+}
