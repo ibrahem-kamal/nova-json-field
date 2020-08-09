@@ -8,8 +8,9 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 class JsonField extends Field
 {
 
-    public function __construct()
+    public function __construct($attribute = null, $resolveCallback = null)
     {
+        parent::__construct($attribute,$resolveCallback);
         $this->withMeta([
             'mode' => 'code',
             'expandedOnStart' => false,
@@ -41,10 +42,10 @@ class JsonField extends Field
     }
     public function expandedOnStart(bool $expandedOnStart)
     {
-        return $this->withMeta(['expandedOnStart' => $expandedOnStart ]);
+        return $this->withMeta(['expandedOnStart' => $expandedOnStart]);
     }
-    public function defaultJson(string $defaultJson)
+    public function defaultJsonPath(string $defaultJson)
     {
-        return $this->withMeta(['defaultJson' => $defaultJson ]);
+        return $this->withMeta(['defaultJson' => (object) json_decode(file_get_contents($defaultJson))]);
     }
 }
