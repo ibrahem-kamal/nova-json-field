@@ -1,6 +1,6 @@
 {
     "name": "ibrahemKamal/JsonField",
-    "description": "A Laravel Nova field.",
+    "description": "A Laravel Nova Json field.",
     "keywords": [
         "laravel",
         "nova"
